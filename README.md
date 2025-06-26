@@ -37,8 +37,9 @@ msbuild SpaceInvaders.sln /p:Configuration=Debug /p:Platform=x64
 Após a compilação, o executável estará disponível no caminho `.\build\bin\Debug-windows-x86_64\SpaceInvaders.exe`:
 
 ```plaintext
-────build
-    └───bin
-        └───Debug-windows-x86_64
-            └───SpaceInvaders.exe
+ .
+└──  build
+    └──  bin
+        └──  Debug-windows-x86_64
+            └──  SpaceInvaders.exe
 ```
