@@ -13,7 +13,7 @@ project "SpaceInvaders"
 targetdir("build/bin/" .. outputdir)
 objdir("build/obj/" .. outputdir)
 
-files {"source/**.cpp", "include/**.h"}
+files {"source/**.cpp", "include/**.hpp"}
 
 includedirs {"include"}
 

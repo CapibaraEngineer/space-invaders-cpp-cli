@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-#include "options.h"
+#include "options.hpp"
 
 int inOptions()
 {

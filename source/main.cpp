@@ -2,9 +2,9 @@
 
 using namespace std;
 
-#include "game.h"
-#include "options.h"
-#include "utils.h"
+#include "game.hpp"
+#include "options.hpp"
+#include "utils.hpp"
 
 int main()
 {
