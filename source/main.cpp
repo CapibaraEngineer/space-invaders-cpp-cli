@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    system("cls || clear");
+    consoleClear();
 
     menu();
     return 0;
