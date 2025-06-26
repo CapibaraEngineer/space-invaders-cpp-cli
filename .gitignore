@@ -1,0 +1,7 @@
+# Diretórios
+/build
+/.vscode
+
+# Arquivos soltos
+build_and_run.ps1
+SpaceInvaders.sln
