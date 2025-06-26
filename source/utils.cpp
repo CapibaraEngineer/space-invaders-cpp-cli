@@ -1,42 +1,37 @@
 #include "utils.hpp"
 
-int KeyPressHandler(int &SelectedOption, int maxOptions)
+int KeyPressHandler(int isMenu, int &SelectedOption, int maxOptions)
 {
     while (true)
     {
         if (_kbhit())
         {
-            int key = _getch();
+            int keyPressed = _getch();
 
-            if (key == ENTER_KEY)
+            if (isMenu == 1)
             {
-                return ENTER_KEY;
+                menuOptions(SelectedOption, maxOptions, keyPressed);
             }
 
-            if (key == ESCAPE_KEY)
-            {
-                return ESCAPE_KEY;
-            }
-
-            switch (key)
-            {
-            case UP_ARROW:
-                if (SelectedOption > 0)
-                {
-                    SelectedOption--;
-                }
-                break;
-            case DOWN_ARROW:
-                if (SelectedOption < (maxOptions - 1))
-                {
-                    SelectedOption++;
-                }
-                break;
-            }
-            break;
+            return keyPressed;
         }
     }
+    return 0;
+}
 
+int menuOptions(int &SelectedOption, int maxOptions, int keyPressed)
+{
+    switch (keyPressed)
+    {
+    case UP_ARROW:
+        if (SelectedOption > 0)
+            SelectedOption--;
+        break;
+    case DOWN_ARROW:
+        if (SelectedOption < (maxOptions - 1))
+            SelectedOption++;
+        break;
+    }
     return 0;
 }
 

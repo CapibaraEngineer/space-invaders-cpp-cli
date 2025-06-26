@@ -33,7 +33,7 @@ int menu()
         cout << "\nv" << version << endl;
         cout << "By Ryan Ferreira\n";
 
-        int key = KeyPressHandler(SelectedOption, maxOptions);
+        int key = KeyPressHandler(1, SelectedOption, maxOptions);
         if (key == ENTER_KEY)
         {
             switch (SelectedOption)

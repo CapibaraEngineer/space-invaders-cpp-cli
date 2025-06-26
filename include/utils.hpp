@@ -12,6 +12,8 @@ using namespace std;
 #define ENTER_KEY 13
 #define ESCAPE_KEY 27
 
-int KeyPressHandler(int &SelectedOption, int maxOptions);
+// Function Prototyoes
+int KeyPressHandler(int isMenu, int &SelectedOption, int maxOptions);
+int menuOptions(int &SelectedOption, int maxOptions, int keyPressed);
 void setCursorPosition(int x, int y);
 void consoleClear();
