@@ -9,18 +9,21 @@ int inGame()
 {
     consoleClear();
 
+    const int sizeX = 40;
+    const int sizeY = 20;
+
+    PlayerClass player;
+    player.posX = sizeX / 2;
+    player.posY = sizeY / 1.2;
+    player.setLimits(sizeX, sizeY);
+
     while (true)
     {
         setCursorPosition(0, 0);
 
-        int sizeX = 40,
-            sizeY = 20;
-
-        PlayerClass player;
-        player.posX = sizeX / 2;
-        player.posY = sizeY / 2;
-
         string MapString = "";
+
+        player.movePlayer(true);
 
         for (int posY = 0; posY <= sizeY; posY++)
         {
