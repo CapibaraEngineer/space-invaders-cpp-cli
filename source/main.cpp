@@ -1,14 +1,12 @@
 #include <iostream>
 
-using namespace std;
-
-#include "game.hpp"
-#include "options.hpp"
 #include "utils.hpp"
+#include "game.hpp"
 
 int main()
 {
     consoleClear();
+    hideCursor();
 
     menu();
     return 0;
@@ -24,14 +22,14 @@ int menu()
     {
         setCursorPosition(0, 0);
 
-        cout << "Space Invaders\n\n";
+        cout << "Space Invaders - C++\n\n";
 
         cout << (SelectedOption == 0 ? "-> Start Game" : "   Start Game") << endl;
         cout << (SelectedOption == 1 ? "-> Options" : "   Options") << endl;
         cout << (SelectedOption == 2 ? "-> Quit Game" : "   Quit Game") << endl;
 
         cout << "\nv" << version << endl;
-        cout << "By Ryan Ferreira\n";
+        cout << "Made by Ryan Ferreira\n";
 
         int key = KeyPressHandler(1, SelectedOption, maxOptions);
         if (key == ENTER_KEY)

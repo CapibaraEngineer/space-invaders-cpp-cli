@@ -1,7 +1,12 @@
-# Diretórios
-/build
+# VS Solutions
 /.vscode
+SpaceInvaders.sln
+
+# Build
+/build
 
 # Arquivos soltos
 build_and_run.ps1
-SpaceInvaders.sln
+
+# Gmake
+Makefile

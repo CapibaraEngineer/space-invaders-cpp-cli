@@ -4,31 +4,31 @@ Uma releitura para console do clássico Space Invaders, desenvolvida em C++.
 
 ## Recursos Utilizados
 
-- C++ para desenvolvimento do jogo  
-- Premake para automação da build  
-- Ferramentas de build MSVC (Microsoft C++ Build Tools)  
-
-> ***Observação:** O projeto utiliza Premake para geração dos arquivos de build, mas ainda não está devidamente configurado.*
+- ***C++20*** para desenvolvimento  
+- ***Premake*** para automação de geração de projetos
+- Ferramentas de build da sua escolha: **GCC**, **MSVC**, **Clang**, etc.
 
 ---
 
-## Configuração do projeto
+## Construindo a partir da Fonte
 
-Para gerar a solução do Visual Studio, execute o comando:
+> *O projeto utiliza a API `<windows.h>`, então provavelmente não funciona fora do Windows. Quem sabe, um dia, eu dê um jeito nisso… (ou não)*.
+
+### Pré-requisitos
+
+- Ter o [Premake5](https://premake.github.io/) instalado.  
+- Um compilador C++ compatível (GCC, MSVC, Clang, etc.).
+
+### Gerando os arquivos de build
+
+No terminal, dentro do diretório do projeto, execute um dos comandos abaixo conforme suas necessidades:
 
 ```bash
-premake5 vs2022
+premake5 gmake  # Para Makefiles (GCC/MinGW)
+premake5 vs2022 # Para .sln (Visual Studio)
 ```
 
-## Compilação
-
-> ***Importante:** Para compilar, certifique-se de iniciar o terminal no **Developer Command Prompt for VS 2022** ou ambiente equivalente com as ferramentas MSVC configuradas.*
-
-Caso deseje compilar o projeto manualmente fora do Visual Studio, utilize o seguinte comando:
-
-```bash
-msbuild SpaceInvaders.sln /p:Configuration=Debug /p:Platform=x64
-```
+Para outras opções de Build, consulte a [documentação oficial do Premake](https://premake.github.io/docs/Using-Premake/).
 
 ---
 
@@ -42,3 +42,5 @@ Após a compilação, o executável estará disponível no caminho `.\build\bin\
         └───Debug-windows-x86_64
             └───SpaceInvaders.exe
 ```
+
+> ***Observação:** Pode ajustar conforme o modo de build (Debug, Release) e sistema operacional (*em `.\premake5.lua`*).*

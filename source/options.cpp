@@ -1,6 +1,7 @@
-#include "options.hpp"
-#include "game.hpp"
+#include <iostream>
+
 #include "utils.hpp"
+#include "game.hpp"
 
 int inOptions()
 {

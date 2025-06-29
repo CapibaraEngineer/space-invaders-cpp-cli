@@ -1,5 +1,4 @@
-#include <conio.h>
-#include <iostream>
+#pragma once
 
 using namespace std;
 
@@ -11,9 +10,12 @@ using namespace std;
 
 #define ENTER_KEY 13
 #define ESCAPE_KEY 27
+#define SPACE_KEY 32
 
 // Function Prototyoes
 int KeyPressHandler(int isMenu, int &SelectedOption, int maxOptions);
 int menuOptions(int &SelectedOption, int maxOptions, int keyPressed);
-void setCursorPosition(int x, int y);
 void consoleClear();
+void setCursorPosition(int x, int y);
+void hideCursor();
+void showCursor();

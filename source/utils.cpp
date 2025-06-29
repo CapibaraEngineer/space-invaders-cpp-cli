@@ -1,5 +1,9 @@
+#include <iostream>
+#include <conio.h>
+
 #include "utils.hpp"
 
+// PressHandler for Menu, subject to change
 int KeyPressHandler(int isMenu, int &SelectedOption, int maxOptions)
 {
     while (true)
@@ -43,4 +47,14 @@ void setCursorPosition(int x, int y)
 void consoleClear()
 {
     cout << "\033[2J";
+}
+
+void hideCursor()
+{
+    cout << "\033[?25l";
+}
+
+void showCursor()
+{
+    cout << "\033[?25h";
 }
