@@ -29,7 +29,7 @@ int menu()
         cout << (SelectedOption == 2 ? "-> Quit Game" : "   Quit Game") << endl;
 
         cout << "\nv" << version << endl;
-        cout << "Made by Ryan Ferreira\n";
+        cout << "Made by some gay\n";
 
         int key = KeyPressHandler(1, SelectedOption, maxOptions);
         if (key == ENTER_KEY)
